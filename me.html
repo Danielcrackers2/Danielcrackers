@@ -1,0 +1,422 @@
+This is a complete HTML document for the Horizon Trust SACCO. It presents the refined operational framework and constitution in a professional, authoritative design. You can run it directly in your browser.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Horizon Trust SACCO · Constitution & Framework 2026</title>
+  <!-- Font Awesome 6 for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f7fc;
+      font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: #1e2b3c;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1300px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 2.5rem;
+      box-shadow: 0 20px 45px rgba(0, 20, 30, 0.12);
+      overflow: hidden;
+      padding: 2.8rem 3rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e9f0f5;
+    }
+
+    /* header & branding */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #dce7f2;
+      padding-bottom: 2rem;
+    }
+
+    .brand h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0a3144;
+      line-height: 1.2;
+    }
+
+    .brand h1 i {
+      color: #2b7a4b;
+      margin-right: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #2c5f2d;
+      margin-top: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .subtitle span {
+      background: #e6f0e9;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    .contact-badge {
+      background: #f0f4fa;
+      padding: 0.7rem 1.6rem;
+      border-radius: 3rem;
+      font-weight: 500;
+      color: #1e3b4f;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+      font-size: 0.95rem;
+    }
+
+    .contact-badge i {
+      color: #2b7a4b;
+      font-size: 1.2rem;
+    }
+
+    .email-link {
+      color: #0a3144;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dotted #2b7a4b;
+    }
+
+    /* sections & grid */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .card {
+      background: #f9fbfd;
+      border-radius: 1.8rem;
+      padding: 1.8rem 1.8rem;
+      border: 1px solid #e2ebf3;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #b8cfc0;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(30, 60, 40, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      font-weight: 650;
+      color: #153e2c;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-left: 5px solid #2b7a4b;
+      padding-left: 1rem;
+    }
+
+    .executive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .exec-card {
+      background: white;
+      border-radius: 1.2rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid #dee9f0;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .exec-card i {
+      font-size: 2rem;
+      color: #2b7a4b;
+    }
+
+    .exec-info strong {
+      display: block;
+      font-weight: 700;
+      color: #0b2b21;
+    }
+
+    .exec-info span {
+      font-size: 0.9rem;
+      color: #4b5c6b;
+    }
+
+    .services-list {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+    .services-list li {
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      font-weight: 500;
+    }
+
+    .services-list i.fa-check-circle {
+      color: #2b7a4b;
+      font-size: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    .signatory-box {
+      background: #f2f7f3;
+      padding: 1rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0 0.8rem;
+      font-weight: 500;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .article-block {
+      margin-top: 2.2rem;
+    }
+
+    .article-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #0a3144;
+      margin: 1.8rem 0 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px dashed #cbdbe9;
+    }
+
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 1.4rem 0;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      background: #e7f0ea;
+      border-radius: 1.5rem;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      color: #0a3622;
+    }
+
+    .badge {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 0.3rem 1.3rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1d4d2e;
+      border: 1px solid #bdd9c5;
+    }
+
+    hr {
+      border: 0.5px solid #dce5ef;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        padding: 1.8rem 1.5rem;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="brand">
+        <h1><i class="fas fa-hand-holding-heart"></i>HORIZON TRUST SACCO</h1>
+        <div class="subtitle">
+          <span>Uganda · 2026</span> 
+          <span style="background:transparent; font-weight:500;"><i class="fas fa-gavel"></i> Operational Framework & Constitution</span>
+        </div>
+      </div>
+      <div class="contact-badge">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:muhindodaniela@gmail.com" class="email-link">muhindodaniela@gmail.com</a>
+        <i class="fas fa-phone-alt" style="margin-left:0.5rem;"></i> <span>Official Contact</span>
+      </div>
+    </div>
+
+    <!-- PREAMBLE + VISION MISSION -->
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+      <div style="flex: 2; min-width: 280px;">
+        <p style="font-weight: 600; color: #1a4b33; font-size: 1.2rem; margin-bottom: 0.5rem;">1. PREAMBLE AND ESTABLISHMENT</p>
+        <p style="font-size: 1.05rem; color: #1e2f3c;">Horizon Trust SACCO is a legally constituted, member-centric financial cooperative, founded upon mutual self-help and collective economic empowerment. It cultivates a disciplined savings culture and delivers accessible, affordable credit. The SACCO operates with transparency, cooperative principles, and full alignment with Uganda’s regulatory framework.</p>
+      </div>
+      <div style="flex: 1.5; background: #f2f8f4; border-radius: 1.5rem; padding: 1.5rem;">
+        <p><strong><i class="fas fa-eye" style="color:#2b7a4b;"></i> VISION</strong><br>To stand as a preeminent, trusted, and innovative savings and credit institution, empowering members through sustainable financial growth, absolute transparency, and broad-based economic inclusion.</p>
+        <p style="margin-top:1rem;"><strong><i class="fas fa-bullseye" style="color:#2b7a4b;"></i> MISSION</strong><br>To provide meticulously secure savings avenues, affordable and responsible loan products, and sound financial stewardship, strengthening economic stability and holistic development of all members.</p>
+      </div>
+    </div>
+
+    <!-- CORE VALUES -->
+    <div style="margin: 1.8rem 0;">
+      <h3 style="font-weight: 700; color: #153e2c;"><i class="fas fa-star"></i> 4. CORE VALUES</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; margin-top: 0.7rem;">
+        <span class="badge"><i class="fas fa-balance-scale"></i> Integrity</span>
+        <span class="badge"><i class="fas fa-clipboard-check"></i> Accountability</span>
+        <span class="badge"><i class="fas fa-equals"></i> Equity</span>
+        <span class="badge"><i class="fas fa-briefcase"></i> Professionalism</span>
+        <span class="badge"><i class="fas fa-users"></i> Inclusiveness</span>
+      </div>
+    </div>
+
+    <!-- EXECUTIVE LEADERSHIP -->
+    <div class="card" style="margin:1.5rem 0;">
+      <h3><i class="fas fa-user-tie"></i> 5. EXECUTIVE LEADERSHIP</h3>
+      <p style="margin-bottom: 1rem;">Supreme administrative authority vested in democratically elected Executive Committee (2-year tenure, renewable by General Assembly).</p>
+      <div class="executive-grid">
+        <div class="exec-card"><i class="fas fa-crown"></i><div class="exec-info"><strong>MBUSA FESTO</strong><span>Chairman</span></div></div>
+        <div class="exec-card"><i class="fas fa-pen-fancy"></i><div class="exec-info"><strong>MUHINDO DANIEL</strong><span>Secretary</span></div></div>
+        <div class="exec-card"><i class="fas fa-coins"></i><div class="exec-info"><strong>MUHINDO SARAH</strong><span>Treasurer</span></div></div>
+        <div class="exec-card"><i class="fas fa-bullhorn"></i><div class="exec-info"><strong>BWAMBALE WILBERT</strong><span>Chief Mobilizer</span></div></div>
+      </div>
+    </div>
+
+    <!-- SERVICES & FINANCIAL MANAGEMENT (two columns) -->
+    <div class="grid-2col">
+      <div class="card">
+        <h3><i class="fas fa-piggy-bank"></i> 6. SERVICES</h3>
+        <ul class="services-list">
+          <li><i class="fas fa-check-circle"></i> <strong>Savings:</strong> Daily/weekly/monthly contributions, receipted, audited.</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Credit:</strong> Short-to-medium term loans, regulated rates, creditworthiness & savings history required.</li>
+        </ul>
+        <p style="font-size:0.9rem; margin-top:0.8rem; color:#2d4b3a;"><i class="fas fa-exclamation-triangle"></i> Loan repayment is a binding obligation.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-landmark"></i> 7. FINANCIAL MANAGEMENT</h3>
+        <p><strong>Cash Handling:</strong> Instant recording, official receipt issued. No transaction valid without pre-numbered receipt.</p>
+        <div class="signatory-box">
+          <i class="fas fa-university"></i> <strong>Bank Account:</strong> Horizon Trust SACCO<br>
+          <span><i class="fas fa-signature"></i> Signatories: <strong>MBUSA FESTO</strong> (Chairman) & <strong>MUHINDO SARAH</strong> (Treasurer) – dual signature mandatory.</span>
+        </div>
+        <p style="font-size:0.9rem;"><i class="fas fa-book"></i> Records: Member Register, Savings Ledgers, Loan Registers, Minutes, Cashbook, Audit Reports, Financial Statements.</p>
+      </div>
+    </div>
+
+    <!-- MEETINGS & GOVERNANCE -->
+    <div class="card" style="margin:1.2rem 0;">
+      <h3><i class="fas fa-calendar-alt"></i> 8. MEETINGS AND GOVERNANCE</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+        <div><strong>General Assembly</strong><br>Supreme body, all members, quarterly or extraordinary.</div>
+        <div><strong>Executive Committee</strong><br>Monthly meetings, policy execution & oversight.</div>
+        <div><strong>Annual General Meeting</strong><br>Audited accounts, elections, policy amendments, annual review.</div>
+      </div>
+    </div>
+
+    <!-- POLICIES (9.1, 9.2, 9.3) -->
+    <div class="policy-grid">
+      <div class="card"><h3><i class="fas fa-wallet"></i> 9.1 Savings Policy</h3><p>Consistent savings pattern; minimum threshold set by General Assembly. Withdrawal follows documented procedure.</p></div>
+      <div class="card"><h3><i class="fas fa-file-invoice"></i> 9.2 Loan Policy</h3><p>Limits based on savings & liquidity. Penalties for late payment; persistent default leads to suspension.</p></div>
+      <div class="card"><h3><i class="fas fa-gavel"></i> 9.3 Discipline</h3><p>Fraud, misrepresentation, misuse of property, willful default, breach of confidentiality. Penalties: warning, fine, suspension, termination.</p></div>
+    </div>
+
+    <!-- STATUTORY COMPLIANCE -->
+    <div style="background: #eef4f9; border-radius: 1.3rem; padding: 1.3rem 1.8rem; margin: 1.5rem 0;">
+      <h3 style="margin-bottom:0.5rem;"><i class="fas fa-shield-alt"></i> 10. STATUTORY & LEGAL COMPLIANCE (UGANDA)</h3>
+      <p style="display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+        <span><i class="fas fa-check"></i> Cooperative Societies Act, Cap 112</span>
+        <span><i class="fas fa-check"></i> Tier 4 Microfinance Institutions & Moneylenders Act, 2016</span>
+        <span><i class="fas fa-check"></i> MTIC Regulations</span>
+        <span><i class="fas fa-check"></i> Bank of Uganda Consumer Protection Guidelines</span>
+      </p>
+    </div>
+
+    <!-- OFFICIAL SACCO CONSTITUTION (Articles) -->
+    <div class="article-block">
+      <h2 style="font-size: 2rem; font-weight: 700; color: #0a3144; margin-top: 0.8rem;"><i class="fas fa-scroll"></i> 11. OFFICIAL SACCO CONSTITUTION</h2>
+      
+      <div class="article-title">ARTICLE 1: NAME</div>
+      <p><strong>Horizon Trust SACCO</strong> (“the SACCO”).</p>
+
+      <div class="article-title">ARTICLE 2: PURPOSES AND OBJECTIVES</div>
+      <p>a) Mobilize member savings. b) Extend prudent credit at equitable rates. c) Promote financial literacy & economic empowerment. d) Foster responsible financial management. e) Operate on cooperative principles, free from discrimination.</p>
+
+      <div class="article-title">ARTICLE 3: MEMBERSHIP</div>
+      <p><strong>3.1 Eligibility:</strong> Open to individuals committed to regular saving, active participation, and policy compliance.<br>
+      <strong>3.2 Rights:</strong> Democratic participation, access savings/credit, transparent information, elect & be elected.<br>
+      <strong>3.3 Responsibilities:</strong> Uphold integrity, meet savings obligations, timely loan repayment, attend meetings.</p>
+
+      <div class="article-title">ARTICLE 4: GOVERNANCE STRUCTURE</div>
+      <p>a) General Assembly (supreme). b) Executive Committee. c) Standing and ad-hoc committees as established.</p>
+
+      <div class="article-title">ARTICLE 5: FINANCIAL ADMINISTRATION</div>
+      <p>a) All flows receipted & documented. b) Designated bank account. c) Monthly internal audits, annual external audit. d) Loan limits per committee & General Assembly.</p>
+
+      <div class="article-title">ARTICLE 6: DISCIPLINARY FRAMEWORK</div>
+      <p>Grounds: fraud, willful default, misappropriation, gross disrespect. Measures: censure, fines, suspension, termination.</p>
+
+      <div class="article-title">ARTICLE 7: AMENDMENTS</div>
+      <p>By two-thirds majority vote of General Assembly members present and voting.</p>
+
+      <div class="article-title">ARTICLE 8: DISSOLUTION</div>
+      <p>After satisfying liabilities, remaining net assets distributed proportionally per member’s recorded savings balance.</p>
+    </div>
+
+    <!-- footer with email reinforcement -->
+    <div class="footer-note">
+      <div>
+        <i class="fas fa-check-circle" style="color:#1f5e3a;"></i> 
+        <strong>Horizon Trust SACCO · Uganda 2026</strong> — Member-centric, transparent, compliant.
+      </div>
+      <div style="display: flex; align-items: center; gap: 1.2rem;">
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:muhindodaniela@gmail.com" style="color:#0a3144; font-weight:600; text-decoration:none;">muhindodaniela@gmail.com</a>
+        <span style="background:#fff; padding:0.2rem 1rem; border-radius:20px;"><i class="fas fa-phone"></i> official contact</span>
+      </div>
+    </div>
+
+    <!-- subtle note that all original meaning preserved -->
+    <div style="text-align: right; font-size: 0.8rem; color: #5f6c7a; margin-top: 0.5rem;">
+      <i class="fas fa-lock"></i> Constitution refined for authority · every original name and detail preserved.
+    </div>
+  </div>
+</body>
+</html>
+```
